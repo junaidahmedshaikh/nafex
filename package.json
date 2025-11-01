@@ -1,0 +1,47 @@
+{
+  "name": "nafex",
+  "version": "1.0.1",
+  "description": "Description: Comprehensive testing library for API testing, system monitoring, and step execution tracking",
+  "homepage": "https://github.com/junaidahmedshaikh/nafex#readme",
+  "bugs": {
+    "url": "https://github.com/junaidahmedshaikh/nafex/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/junaidahmedshaikh/nafex.git"
+  },
+  "keywords": [
+    "api-testing",
+    "api",
+    "testing",
+    "performance-testing",
+    "system-monitoring",
+    "resource-monitoring",
+    "step-tracking",
+    "test-runner",
+    "monitoring",
+    "automation"
+  ],
+  "license": "ISC",
+  "author": "Junaid <junaidbuss@gmail.com>",
+  "type": "module",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node ./bin/cli.js",
+    "test": "node ./index.js",
+    "build": "node build.js",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "fs-extra": "^11.3.2"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.11",
+    "parcel": "^2.16.0"
+  }
+}
