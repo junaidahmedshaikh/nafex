@@ -1,5 +1,5 @@
-import Link from "next/link"
-import { Code, Github, Package } from "lucide-react"
+import Link from "next/link";
+import { Code, Github, Package } from "lucide-react";
 
 export function Footer() {
   return (
@@ -13,23 +13,34 @@ export function Footer() {
               </div>
               <span className="font-bold">nafex</span>
             </div>
-            <p className="text-sm text-muted-foreground">Lightweight API testing for developers</p>
+            <p className="text-sm text-muted-foreground">
+              Lightweight API testing for developers
+            </p>
           </div>
           <div>
             <h4 className="font-semibold mb-4">Product</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/features" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="/features"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Features
                 </Link>
               </li>
               <li>
-                <Link href="/docs" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="/docs"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Documentation
                 </Link>
               </li>
               <li>
-                <Link href="/examples" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="/examples"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Examples
                 </Link>
               </li>
@@ -50,7 +61,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/junaidahmedshaikh/nafex"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-foreground transition-colors"
@@ -59,7 +70,10 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="/about"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   About
                 </Link>
               </li>
@@ -68,7 +82,9 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Author</h4>
             <p className="text-sm text-muted-foreground">Junaid Ahmed Shaikh</p>
-            <p className="text-sm text-muted-foreground mt-4">© 2025 nafex. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground mt-4">
+              © 2025 nafex. All rights reserved.
+            </p>
           </div>
         </div>
 
@@ -76,7 +92,7 @@ export function Footer() {
           <p>Made with purpose for developers</p>
           <div className="flex gap-4 mt-4 sm:mt-0">
             <a
-              href="https://github.com"
+              href="https://github.com/junaidahmedshaikh"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-foreground transition-colors flex items-center gap-1"
@@ -95,5 +111,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

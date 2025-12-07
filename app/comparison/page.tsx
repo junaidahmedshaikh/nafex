@@ -1,7 +1,7 @@
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { Check, X } from "lucide-react";
-
+import HeroHeader from "@/components/hero-header";
 export const metadata = {
   title: "Comparison - nafex",
   description: "How nafex compares to other API testing tools",
@@ -112,24 +112,11 @@ export default function ComparisonPage() {
       <Navigation />
 
       {/* Hero */}
-      <section className="relative overflow-hidden px-4 py-20 sm:py-32 sm:px-6 lg:px-8">
-        <div
-          className="absolute inset-0 opacity-30"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 50% 50%, rgba(100, 50, 255, 0.1) 0%, transparent 50%)",
-          }}
-        ></div>
 
-        <div className="relative mx-auto max-w-3xl text-center">
-          <h1 className="text-balance text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            How Nafex Compares
-          </h1>
-          <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
-            See how nafex stacks up against other popular API testing tools.
-          </p>
-        </div>
-      </section>
+      <HeroHeader
+        title="How Nafex Compares"
+        subtitle="See how nafex stacks up against other popular API testing tools."
+      />
 
       {/* Comparison Table */}
       <section className="px-4 py-20 sm:py-32 sm:px-6 lg:px-8">

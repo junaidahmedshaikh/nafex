@@ -1,8 +1,8 @@
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
-import { CodeBlock } from "@/components/code-block";
+import { ColorCodeBlock } from "@/components/color-code-block";
 import { Code, Zap, Shield, BarChart3, Workflow } from "lucide-react";
-
+import HeroHeader from "@/components/hero-header";
 export const metadata = {
   title: "Examples - nafex | Real-World Code Examples",
   description:
@@ -15,25 +15,11 @@ export default function ExamplesPage() {
       <Navigation />
 
       {/* Hero */}
-      <section className="relative overflow-hidden px-4 py-20 sm:py-32 sm:px-6 lg:px-8">
-        <div
-          className="absolute inset-0 opacity-30"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 50% 50%, rgba(100, 50, 255, 0.1) 0%, transparent 50%)",
-          }}
-        ></div>
-
-        <div className="relative mx-auto max-w-4xl text-center">
-          <h1 className="text-balance text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Code Examples
-          </h1>
-          <p className="text-xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed">
-            Real-world examples showing how to use Nafex for API testing, step
-            tracking, and system monitoring in your projects.
-          </p>
-        </div>
-      </section>
+      <HeroHeader
+        title="Code Examples"
+        subtitle=" Real-world examples showing how to use Nafex for API testing, step
+            tracking, and system monitoring in your projects."
+      />
 
       {/* Examples */}
       <section className="px-4 py-20 sm:py-32 sm:px-6 lg:px-8">
@@ -47,7 +33,7 @@ export default function ExamplesPage() {
             <p className="text-muted-foreground mb-6">
               Basic API testing with automatic validation and reporting:
             </p>
-            <CodeBlock
+            <ColorCodeBlock
               language="javascript"
               code={`import { ApiTester } from 'nafex';
 
@@ -88,7 +74,7 @@ testUserAPI().catch(console.error);`}
               Track multiple steps across your test workflow with automatic
               timing:
             </p>
-            <CodeBlock
+            <ColorCodeBlock
               language="javascript"
               code={`import { stepTracker, ApiTester } from 'nafex';
 
@@ -134,7 +120,7 @@ userCreationWorkflow().catch(console.error);`}
             <p className="text-muted-foreground mb-6">
               Perform comprehensive security testing with authentication:
             </p>
-            <CodeBlock
+            <ColorCodeBlock
               language="javascript"
               code={`import { ApiTester } from 'nafex';
 
@@ -184,7 +170,7 @@ securityAudit().catch(console.error);`}
             <p className="text-muted-foreground mb-6">
               Load testing with concurrent users and performance monitoring:
             </p>
-            <CodeBlock
+            <ColorCodeBlock
               language="javascript"
               code={`import { ApiTester, systemResourceMonitor } from 'nafex';
 
@@ -238,7 +224,7 @@ performanceTest().catch(console.error);`}
               Comprehensive test suite combining all features with
               cross-component tracking:
             </p>
-            <CodeBlock
+            <ColorCodeBlock
               language="javascript"
               code={`import { ApiTester, stepTracker, systemResourceMonitor } from 'nafex';
 
@@ -313,7 +299,7 @@ runCompleteTestSuite().catch(console.error);`}
             <p className="text-muted-foreground mb-6">
               Integration with CI/CD pipelines for automated testing:
             </p>
-            <CodeBlock
+            <ColorCodeBlock
               language="javascript"
               code={`import { ApiTester, stepTracker } from 'nafex';
 

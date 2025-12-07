@@ -5,7 +5,7 @@ import { Footer } from "@/components/footer";
 import { ColorCodeBlock } from "@/components/color-code-block";
 import { Package, AlertCircle, CheckCircle, Zap } from "lucide-react";
 import { useState } from "react";
-
+import HeroHeader from "@/components/hero-header";
 export default function DocsPage() {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
 
@@ -20,55 +20,12 @@ export default function DocsPage() {
       <Navigation />
 
       {/* Hero */}
-      <section className="relative overflow-hidden px-4 py-20 sm:py-32 sm:px-6 lg:px-8 border-b border-border">
-        <div
-          className="absolute inset-0 opacity-30"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 50% 50%, rgba(100, 50, 255, 0.1) 0%, transparent 50%)",
-          }}
-        ></div>
 
-        <div className="relative mx-auto max-w-4xl text-center">
-          <h1 className="text-balance text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Complete Documentation
-          </h1>
-          <p className="text-xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed">
-            Everything you need to master Nafex for API testing, step tracking,
-            and system monitoring.
-          </p>
-        </div>
-      </section>
-
-      {/* Quick Navigation */}
-      {/* <section className="px-4 py-12 sm:px-6 lg:px-8 bg-card/50 border-b border-border sticky top-16 z-40">
-        <div className="mx-auto max-w-6xl">
-          <h2 className="text-lg font-bold mb-6 flex items-center gap-2">
-            <Zap className="h-5 w-5 text-primary" />
-            Quick Navigation
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3">
-            {[
-              { title: "Installation", id: "installation" },
-              { title: "Quick Start", id: "quick-start" },
-              { title: "API Module", id: "api-module" },
-              { title: "Step Tracking", id: "step-tracking" },
-              { title: "System Monitor", id: "system-monitoring" },
-              { title: "Best Practices", id: "best-practices" },
-              { title: "Error Handling", id: "error-handling" },
-              { title: "Troubleshooting", id: "troubleshooting" },
-            ].map((item) => (
-              <a
-                key={item.id}
-                href={`#${item.id}`}
-                className="px-3 py-2 rounded-lg bg-background hover:bg-primary/10 text-foreground hover:text-primary transition-all text-sm font-medium border border-border hover:border-primary group"
-              >
-                <span className="truncate">{item.title}</span>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section> */}
+      <HeroHeader
+        title="Complete Documentation"
+        subtitle="Everything you need to master Nafex for API testing, step tracking,
+            and system monitoring."
+      />
 
       {/* Main Content */}
       <section className="px-4 py-16 sm:py-24 sm:px-6 lg:px-8">
